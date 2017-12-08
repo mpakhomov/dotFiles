@@ -11,6 +11,7 @@ set expandtab       " Expand TABs to spaces
 set backspace=indent,eol,start   "Make backspaces delete sensibly
 set matchpairs+=<:>              "Allow % to bounce between angles too
 set number
+set nocompatible
 
 syntax on
 "filetype indent on 
@@ -22,5 +23,11 @@ colorscheme desert
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " switch between open buffers
-nmap <C-[> :bp<CR>
-nmap <C-]> :bn<CR>
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+
+" plugins:
+" - NERDTree
+" - vim-airline
+" - ctrlp
+" - figutive
